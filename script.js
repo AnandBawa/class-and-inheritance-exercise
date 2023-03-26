@@ -16,6 +16,7 @@ class Shape {
   constructor() {
     this.type = this.constructor.name; //displays the type of shape
   }
+
   //any shape can be placed or moved on the grid using x, y values inputted. when placed on the grid a position property is assigned to the object
   addToPlane(x, y) {
     this.position = new Point(x, y);

@@ -84,7 +84,7 @@ class Polygon extends Shape {
 }
 
 class Triangle extends Polygon {
-  //triangle object is created using 3 values that each make up a 'side' object which is then returned to Polygon parent class as array of 'side' objects
+  //triangle object is created using 3 integer values that each make up a 'side' object which is then returned to Polygon parent class as array of 'side' objects
   constructor(a, b, c) {
     let s1 = new Side(a);
     let s2 = new Side(b);
@@ -94,7 +94,7 @@ class Triangle extends Polygon {
 }
 
 class Quadrilateral extends Polygon {
-  //quadrilateral object is created using 4 values that each make up a 'side' object which is then returned to Polygon parent class as an array of 'side' objects
+  //quadrilateral object is created using 4 integer values that each make up a 'side' object which is then returned to Polygon parent class as an array of 'side' objects
   constructor(a, b, c, d) {
     let s1 = new Side(a);
     let s2 = new Side(b);
@@ -105,7 +105,7 @@ class Quadrilateral extends Polygon {
 }
 
 class Rectangle extends Quadrilateral {
-  //since rectangle is a type of quadrilateral its only needs 2 values, width and height. we send two of each to its parent class of Quadilateral
+  //since rectangle is a type of quadrilateral its only needs 2 integer values, width and height. we send two of each to its parent class of Quadilateral
   constructor(a, b) {
     super(a, b, a, b);
     this.width = a;
@@ -118,7 +118,7 @@ class Rectangle extends Quadrilateral {
 }
 
 class Square extends Rectangle {
-  //since square is a quadrilateral with all sides equal, we only need 1 value of side length and send 2 of the same to its parent class Rectangle, which further sends 4 of same to Quadilateral class
+  //since square is a quadrilateral with all sides equal, we only need 1 integer value of side length and send 2 of the same to its parent class Rectangle, which further sends 4 of same to Quadilateral class
   constructor(a) {
     super(a, a);
     this.length = a;

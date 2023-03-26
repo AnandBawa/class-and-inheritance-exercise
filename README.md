@@ -42,4 +42,6 @@ This exercise is from https://github.com/learn-co-students/javascript-inheritanc
    `constructor`, `area`, `perimeter`, and other things inherited from the
    prototype chain.
 
+## Visual Workflow
+
 ![inheritance](/inheritance.jpg)

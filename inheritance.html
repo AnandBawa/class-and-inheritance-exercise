@@ -138,6 +138,31 @@
           console.log("Unique properties are:", Object.keys(this).join(", "));
         }
       }
+
+      let sq = new Square(5);
+      let rec = new Rectangle(5, 7);
+      let quad = new Quadrilateral(1, 2, 3, 4);
+      let tri = new Triangle(1, 2, 3);
+
+      let side = new Side(8);
+      let poly = new Polygon([new Side(1), new Side(2), new Side(3)]);
+
+      let cir = new Circle(6);
+
+      let shape = new Shape();
+
+      console.log(sq.type);
+      sq.addToPlane(1, 2);
+      sq.move(2, 3);
+      sq.position.toString();
+      sq.sides;
+      sq.perimeter();
+      sq.numberOfSides();
+      sq.width;
+      sq.height;
+      sq.area();
+      sq.length;
+      sq.listProperties();
     </script>
   </head>
   <body></body>

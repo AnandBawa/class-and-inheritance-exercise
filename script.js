@@ -147,16 +147,16 @@ let cir = new Circle(6);
 
 let shape = new Shape();
 
-console.log(sq.type);
+console.log("Shape type is:", sq.type);
 sq.addToPlane(1, 2);
 sq.move(2, 3);
 sq.position.toString();
 console.log(sq.sides);
 sq.numberOfSides();
 sq.perimeter();
-console.log(sq.width);
-console.log(sq.height);
+console.log(sq.type, "width is: ", sq.width);
+console.log(sq.type, "height is: ", sq.height);
 sq.area();
-console.log(sq.length);
+console.log(sq.type, "length is: ", sq.length);
 sq.listProperties();
 console.log(sq);

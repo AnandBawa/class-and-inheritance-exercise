@@ -41,3 +41,5 @@ This exercise is from https://github.com/learn-co-students/javascript-inheritanc
    properties that belong to `Square`. It should not list the
    `constructor`, `area`, `perimeter`, and other things inherited from the
    prototype chain.
+
+![inheritance](/inheritance.jpg)

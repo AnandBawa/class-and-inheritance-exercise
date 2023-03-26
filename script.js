@@ -1,3 +1,5 @@
+// Creating shapes as classes and placing on the grid
+
 class Point {
   //point defines the coordinates where a shape is on the (x,y) grid
   constructor(x, y) {

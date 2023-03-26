@@ -1,6 +1,6 @@
 # class-and-inheritance-exercise
 
-This exercise is from https://github.com/learn-co-students/javascript-inheritance-patterns-lab-v-000
+This exercise creates classes instead of objects using instructions from <https://github.com/learn-co-students/javascript-inheritance-patterns-lab-v-000>
 
 ## Instructions
 

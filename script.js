@@ -27,7 +27,8 @@ class Shape {
   move(x, y) {
     if (Object.keys(this).includes("position")) {
       //Object.hasOwn(this, "position") also works
-      this.position = new Point(this.position.x + x, this.position.y + y);
+      this.position.x += x;
+      this.position.y += y;
       console.log("Moved to coordinates (", this.position.x, ",", this.position.y, ")");
     } else {
       this.addToPlane(x, y);

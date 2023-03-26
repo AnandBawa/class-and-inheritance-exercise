@@ -66,6 +66,11 @@ class Polygon extends Shape {
     this.sides = arr;
   }
 
+  //this method will output the number of sides a polygon has
+  numberOfSides() {
+    console.log("The number of sides is:", this.sides.length);
+  }
+
   //perimeter is sum of all sides of a polygon
   perimeter() {
     let sum = this.sides.reduce((acc, side) => acc + side.length, 0);
@@ -75,11 +80,6 @@ class Polygon extends Shape {
     // });
 
     console.log("Perimiter is:", sum);
-  }
-
-  //this method will output the number of sides a polygon has
-  numberOfSides() {
-    console.log("The number of sides is:", this.sides.length);
   }
 }
 
@@ -151,9 +151,9 @@ console.log(sq.type);
 sq.addToPlane(1, 2);
 sq.move(2, 3);
 sq.position.toString();
-sq.sides;
-sq.perimeter();
+console.log(sq.sides);
 sq.numberOfSides();
+sq.perimeter();
 sq.width;
 sq.height;
 sq.area();

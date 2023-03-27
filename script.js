@@ -2,6 +2,7 @@
 
 class Point {
   //point defines the coordinates where a shape is on the (x,y) grid
+
   constructor(x, y) {
     this.x = x;
     this.y = y;
@@ -13,18 +14,22 @@ class Point {
 }
 
 class Shape {
+  //create a generic shape classs which requires no arguments but provides methods to every child shapes
+
   constructor() {
     this.type = this.constructor.name; //displays the type of shape
   }
 
-  //any shape can be placed or moved on the grid using x, y values inputted. when placed on the grid a position property is assigned to the object
   addToPlane(x, y) {
+    //any shape can be placed or moved on the grid using x, y values inputted. when placed on the grid a position property is assigned to the object
+
     this.position = new Point(x, y);
     console.log("Added to coordinates (", this.position.x, ",", this.position.y, ")");
   }
 
-  //move the shape to a new point on the grid using x, y values inputted. if the shape is not on the grid it gets added
   move(x, y) {
+    // move the shape to a new point on the grid using x, y values inputted. if the shape is not on the grid it gets added
+
     if (Object.keys(this).includes("position")) {
       //Object.hasOwn(this, "position") also works
       this.position.x += x;
@@ -38,6 +43,7 @@ class Shape {
 
 class Circle extends Shape {
   //circle is a shape with no sides
+
   constructor(radius) {
     super();
     this.radius = radius;
@@ -54,6 +60,7 @@ class Circle extends Shape {
 
 class Side {
   //any polygon has 3 or more sides. Each side has a value we assign to length property of side object
+
   constructor(len) {
     this.length = len;
   }
@@ -61,23 +68,27 @@ class Side {
 
 class Polygon extends Shape {
   //polygon requires an array of 'side' objects depending on the number of sides of the polygon
+
   constructor(arr) {
     super();
     this.sides = arr;
   }
 
-  //this method will output the number of sides a polygon has
   numberOfSides() {
+    //this method will output the number of sides a polygon has
+
     console.log("The number of sides is:", this.sides.length);
   }
 
-  //perimeter is sum of all sides of a polygon
   perimeter() {
+    //perimeter is sum of all sides of a polygon
+
     let sum = this.sides.reduce((acc, side) => acc + side.length, 0);
+
     // let sum = 0;
     // this.sides.forEach(function (side) {
     //   sum += side.length;
-    // });
+    // }); [this also works to calculate sum]
 
     console.log("Perimiter is:", sum);
   }
@@ -85,6 +96,7 @@ class Polygon extends Shape {
 
 class Triangle extends Polygon {
   //triangle object is created using 3 integer values that each make up a 'side' object which is then returned to Polygon parent class as array of 'side' objects
+
   constructor(a, b, c) {
     let s1 = new Side(a);
     let s2 = new Side(b);
@@ -95,6 +107,7 @@ class Triangle extends Polygon {
 
 class Quadrilateral extends Polygon {
   //quadrilateral object is created using 4 integer values that each make up a 'side' object which is then returned to Polygon parent class as an array of 'side' objects
+
   constructor(a, b, c, d) {
     let s1 = new Side(a);
     let s2 = new Side(b);
@@ -106,6 +119,7 @@ class Quadrilateral extends Polygon {
 
 class Rectangle extends Quadrilateral {
   //since rectangle is a type of quadrilateral its only needs 2 integer values, width and height. we send two of each to its parent class of Quadilateral
+
   constructor(a, b) {
     super(a, b, a, b);
     this.width = a;
@@ -119,6 +133,7 @@ class Rectangle extends Quadrilateral {
 
 class Square extends Rectangle {
   //since square is a quadrilateral with all sides equal, we only need 1 integer value of side length and send 2 of the same to its parent class Rectangle, which further sends 4 of same to Quadilateral class
+
   constructor(a) {
     super(a, a);
     this.length = a;

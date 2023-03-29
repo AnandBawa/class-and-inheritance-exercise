@@ -24,7 +24,13 @@ class Shape {
     //any shape can be placed or moved on the grid using x, y values inputted. when placed on the grid a position property is assigned to the object
 
     this.position = new Point(x, y);
-    console.log("Added to coordinates (", this.position.x, ",", this.position.y, ")");
+    console.log(
+      "Added to coordinates (",
+      this.position.x,
+      ",",
+      this.position.y,
+      ")"
+    );
   }
 
   move(x, y) {
@@ -34,7 +40,13 @@ class Shape {
       //Object.hasOwn(this, "position") also works
       this.position.x += x;
       this.position.y += y;
-      console.log("Moved to coordinates (", this.position.x, ",", this.position.y, ")");
+      console.log(
+        "Moved to coordinates (",
+        this.position.x,
+        ",",
+        this.position.y,
+        ")"
+      );
     } else {
       this.addToPlane(x, y);
     }
